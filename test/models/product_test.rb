@@ -42,7 +42,7 @@ class ProductTest < ActiveSupport::TestCase
         title: "My Book Title",
         description: "yyy",
         price: 1,
-        image_url: "zzz.jpg"
+        image_url: image_url
     )
   end
 
@@ -59,6 +59,21 @@ class ProductTest < ActiveSupport::TestCase
       assert new_product(name).invalid?, "#{name} shouldn't be valid" # не должно быть приемлемым
     end
 
+  end
+
+  test "image url" do
+    ok = %w{ fred.gif fred.jpg fred.png FRED.JPG FRED.Jpg
+             http://a.b.c/x/y/z/fred.gif }
+    bad = %w{ fred.doc fred.gif/more fred.gif.more }
+
+    ok.each do |name|
+      assert new_product(name).valid?, "#{name} shouldn't be invalid"
+    end
+#=begin
+    bad.each do |name|
+      assert new_product(name).invalid?, "#{name} shouldn't be valid"
+    end
+#=end
   end
 
   test "product is not valid without a unique title" do
