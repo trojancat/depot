@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 ruby:
-  title: Programming Ruby 1.9
+  title: Programming Ruby 1.9 & 2.0
   description:
     Ruby is the faster growing and most exciting dynamic
     language out there. If you need to get working programs
