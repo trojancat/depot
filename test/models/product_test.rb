@@ -69,11 +69,11 @@ class ProductTest < ActiveSupport::TestCase
     ok.each do |name|
       assert new_product(name).valid?, "#{name} shouldn't be invalid"
     end
-#=begin
+
     bad.each do |name|
       assert new_product(name).invalid?, "#{name} shouldn't be valid"
     end
-#=end
+
   end
 
   test "product is not valid without a unique title" do
