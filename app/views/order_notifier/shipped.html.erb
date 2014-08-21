@@ -1,0 +1,13 @@
+<h3>Заказ из Pragmatic Store отправлен</h3>
+
+<p>
+  Это сообщение уведомляет Вас, что мы отправили ваш недавний заказ:
+</p>
+
+<table>
+  <tr>
+    <th colspan="2">К-во</th>
+    <th colspan="2">Описание</th>
+  </tr>
+  <%= render @order.line_items -%>
+</table>
