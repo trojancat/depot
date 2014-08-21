@@ -15,4 +15,36 @@
 /log/*.log
 /tmp
 
+# Ignore all logfiles and tempfiles.
+log/*.log
+!log
+tmp/*
+!tmp
+.sass-cache/
+
+# Ignore compiled assets
+public/assets/
+
+# Ignore db config file
+config/database.yml
+!config/database.yml.sample
+
+# Ignore realy enviroments config
+config/environments/development.rb
+!config/environments/development.rb.sample
+config/environments/production.rb
+!config/environments/production.rb.sample
+
+# Ignore ngnix notice page
+public/maintenance.thml
+
+# Ignore users uploads
+!public/images/
+public/images/*
+public/images/**/*
+
+# Git keeper
+!.gitkeep
+
+# Igonore IDE files
 /.idea
